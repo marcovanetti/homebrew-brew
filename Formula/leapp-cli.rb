@@ -1,4 +1,4 @@
-class Leapp < Formula
+class LeappCli < Formula
   desc "Install Leapp CLI"
   homepage "https://leapp.cloud"
   url "https://leapp-cli-test.s3.eu-west-1.amazonaws.com/versions/0.1.8/a7c5fd1c/leapp-v0.1.8-a7c5fd1c-darwin-x64.tar.xz"
