@@ -6,7 +6,7 @@ class LeappCli < Formula
   url "https://registry.npmjs.org/@lerna-test-forge/leapp-cli/-/leapp-cli-0.1.18.tgz"
   sha256 "0ba172016006184968ce9f98f3b333c0b41a813bba280792d1a166eb7fd36076"
 
-  depends_on "node@14"
+  depends_on "node@12"
   depends_on "python" => :build
 
   def install
