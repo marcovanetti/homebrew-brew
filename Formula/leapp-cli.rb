@@ -8,7 +8,7 @@ class LeappCli < Formula
   sha256 "872a5380a9368d1135b064e7ee401ddf6554a45f7fe0c3624c2d1bc076c96f26"
 
   depends_on "node@16"
-  depends_on "python@3.x" => :build
+  depends_on "python@3.10" => :build
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
