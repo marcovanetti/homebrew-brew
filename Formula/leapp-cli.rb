@@ -8,7 +8,7 @@ class LeappCli < Formula
   sha256 "0ba172016006184968ce9f98f3b333c0b41a813bba280792d1a166eb7fd36076"
 
   depends_on "node@16"
-  depends_on "libsecret"
+  depends_on "libsecret" => :build
   depends_on "python" => :build
 
   def install
