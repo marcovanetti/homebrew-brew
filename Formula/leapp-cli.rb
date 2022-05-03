@@ -1,14 +1,19 @@
-class LeappCli < Formula
+require "language/node"
+
+  class LeappCli < Formula
   desc "Install Leapp CLI"
   homepage "https://leapp.cloud"
-  version "0.1.25"
-  url "https://registry.npmjs.org/@lerna-test-forge/leapp-cli/-/leapp-cli-0.1.25.tgz"
-  sha256 "1d9d12c5391f517866c1acea2789e1c0de8b8fa98520d25d620471c29e839c21"
+  version "0.1.26"
+  url "https://registry.npmjs.org/@lerna-test-forge/leapp-cli/-/leapp-cli-0.1.26.tgz"
+  sha256 "e8cead87724fd06e4502d30f60802a288147497e956712996d34e8bf55f5077b"
+
+  depends_on "node@16"
+  depends_on "libsecret"
+  depends_on "python" => :build
 
   def install
-    inreplace "bin/leapp", /^CLIENT_HOME=/, "export LEAPP_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
-    libexec.install Dir["*"]
-    bin.install_symlink libexec/"bin/leapp"
+    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
