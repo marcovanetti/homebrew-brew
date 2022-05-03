@@ -5,7 +5,7 @@ class LeappCli < Formula
   homepage "https://leapp.cloud"
   version "0.1.28"
   url "https://registry.npmjs.org/@noovolari/leapp-cli/-/leapp-cli-0.1.12.tgz"
-  sha256 "0ba172016006184968ce9f98f3b333c0b41a813bba280792d1a166eb7fd36076"
+  sha256 "38303fc14b0177f4592c0213598e0b86fc982bf7777bc9f9a2723f134e1dd9bc"
 
   depends_on "node@16"
   depends_on "libsecret"
