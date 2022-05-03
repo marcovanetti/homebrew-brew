@@ -1,4 +1,5 @@
 require "language/node"
+
 class LeappCli < Formula
   desc "Install Leapp CLI"
   homepage "https://leapp.cloud"
@@ -10,8 +11,8 @@ class LeappCli < Formula
   depends_on "python" => :build
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    system "npm", "install", *Language::Node.local_npm_install_args
+    #bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
